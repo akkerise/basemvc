@@ -4,6 +4,6 @@ class Error
 {
     public function __construct()
     {
-        echo "Error Class";
+        echo "<pre>"; var_dump('Error an option!'); die();
     }
 }

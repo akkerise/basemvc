@@ -5,15 +5,14 @@ class Bootstrap
     public function __construct()
     {
 
-
         $url = explode('/', isset($_GET['url']) ? $_GET['url'] : $_SERVER['QUERY_STRING']);
         $file = APP_PATH . DS . $url[0] . '.php';
-
         if (file_exists($file)) {
             require $file;
         } else {
-            require APP_PATH . DS . 'error.php';
-            $controller = new Error();
+            require_once APP_PATH . DS . 'fail.php';
+            $controller = new Fail();
+            return false;
         }
 
         $controller = new $url[0];
