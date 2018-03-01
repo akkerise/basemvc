@@ -1,5 +1,7 @@
 <?php
 
+namespace libs;
+
 class Bootstrap
 {
     public function __construct()
@@ -10,8 +12,8 @@ class Bootstrap
         if (file_exists($file)) {
             require $file;
         } else {
-            require_once APP_PATH . DS . 'fail.php';
-            $controller = new Fail();
+            require 'controllers/fail.php';
+            $controller = new \Fail();
             return false;
         }
 
