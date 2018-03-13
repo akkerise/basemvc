@@ -10,4 +10,8 @@ class HelpModel extends Model
         parent::__construct();
         echo 'HelpModel Class <br>';
     }
+    
+    public function blah(){
+        echo "Blah";
+    }
 }

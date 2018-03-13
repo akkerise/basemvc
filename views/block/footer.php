@@ -1,1 +1,7 @@
-<h4>FOOTER</h4>
+</div>
+
+<div id="footer">
+    @copyright #FOOTER
+</div>
+</body>
+</html>
