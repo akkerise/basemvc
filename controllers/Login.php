@@ -1,5 +1,7 @@
 <?php
+
 use libs\Controller;
+use models\LoginModel;
 
 class Login extends Controller
 {
@@ -11,7 +13,8 @@ class Login extends Controller
 
     public function index()
     {
+        require 'models/LoginModel.php';
+        $model = new LoginModel();
         $this->view->render('login/index');
-        
     }
 }
