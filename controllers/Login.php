@@ -13,7 +13,6 @@ class Login extends Controller
 
     public function index()
     {
-        require 'models/LoginModel.php';
         $model = new LoginModel();
         $this->view->render('login/index');
     }

@@ -7,7 +7,6 @@ require "libs/Database.php";
 require "config/paths.php";
 require "config/database.php";
 
-
 use libs\Bootstrap;
 use libs\Controller;
 use libs\View;
