@@ -21,7 +21,7 @@ class Bootstrap {
 		if (file_exists($file)) {
 			require $file;
 		} else {
-			$this->error();
+			$this->failed();
 		}
 		
 		$controller = new $url[0];
@@ -31,14 +31,14 @@ class Bootstrap {
 			if (method_exists($controller, $url[1])) {
 				$controller->{$url[1]}($url[2]);
 			} else {
-				$this->error();
+				$this->failed();
 			}
 		} else {
 			if (isset($url[1])) {
 				if (method_exists($controller, $url[1])) {
 					$controller->{$url[1]}();
 				} else {
-					$this->error();
+					$this->failed();
 				}
 			} else {
 				$controller->index();
@@ -48,9 +48,9 @@ class Bootstrap {
 		
 	}
 	
-	public function error() {
-		require 'controllers/error.php';
-		$controller = new Error();
+	public function failed() {
+		require 'controllers/Failed.php';
+		$controller = new Failed();
 		$controller->index();
 		return false;
 	}
