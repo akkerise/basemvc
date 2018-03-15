@@ -1,21 +1,18 @@
 <?php
-use libs\Controller;
 
-class Index extends Controller
-{
+class Index extends Controller {
 
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    public function index()
-    {
-        $this->view->render('index/index');
-    }
-
-    public function details($param = false)
-    {
-        $this->view->render('index/index');
-    }
+	function __construct() {
+		parent::__construct();
+	}
+	
+	function index() {
+		echo 'INSIDE INDEX INDEX';
+		$this->view->render('index/index');
+	}
+	
+	function details() {
+		$this->view->render('index/index');
+	}
+	
 }

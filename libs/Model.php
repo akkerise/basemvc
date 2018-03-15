@@ -1,11 +1,9 @@
 <?php
-namespace libs;
 
-class Model
-{
+class Model {
 
-    public function __construct()
-    {
-        $this->db = new Database();
-    }
+	function __construct() {
+		//$this->database = new Database();
+	}
+
 }

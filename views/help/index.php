@@ -1,2 +1,1 @@
-<h2>Welcome to help page!</h2>
-
+this is the help

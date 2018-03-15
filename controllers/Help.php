@@ -1,23 +1,21 @@
 <?php
 
-use libs\Controller;
-use models\HelpModel;
+class Help extends Controller {
 
-class Help extends Controller
-{
-    public function __construct()
-    {
-        parent::__construct();
-    }
+	function __construct() {
+		parent::__construct();
+	}
+	
+	function index() {
+		$this->view->render('help/index');	
+	}
 
-    public function index(){
-        $this->view->render('help/index');
-    }
-    
-    public function other($arg = false)
-    {
-        require 'models/HelpModel.php';
-        $model = new HelpModel();
-        $this->view->blah = $model->blah();
-    }
+	public function other($arg = false) {
+		
+		require 'models/help_model.php';
+		$model = new Help_Model();
+		$this->view->blah = $model->blah();
+		
+	}
+
 }

@@ -1,3 +1,3 @@
 <?php
 
-define('URL' , 'http://basemvc.akke/');
+define('URL', 'http://workspace/mvc/');

@@ -1,1 +1,1 @@
-<h2>Welcome to Index page!</h2>
+This is the main page welcome!
