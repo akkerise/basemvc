@@ -1,10 +1,11 @@
 <?php
 
-class Controller {
+class Controller
+{
 
-	public function __construct() {
-		//echo 'Main controller<br />';
-		$this->view = new View();
-	}
-
+    public function __construct()
+    {
+        // echo 'Main controller<br />';
+        $this->view = new View();
+    }
 }
