@@ -2,7 +2,7 @@
 
 class Bootstrap {
 
-	function __construct() {
+	public function __construct() {
 
 		$url = isset($_GET['url']) ? $_GET['url'] : null;
 		$url = rtrim($url, '/');
@@ -48,7 +48,7 @@ class Bootstrap {
 		
 	}
 	
-	function error() {
+	public function error() {
 		require 'controllers/error.php';
 		$controller = new Error();
 		$controller->index();

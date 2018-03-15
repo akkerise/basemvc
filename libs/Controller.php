@@ -2,7 +2,7 @@
 
 class Controller {
 
-	function __construct() {
+	public function __construct() {
 		//echo 'Main controller<br />';
 		$this->view = new View();
 	}
