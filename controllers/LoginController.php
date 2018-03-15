@@ -10,8 +10,8 @@ class LoginController extends Controller {
 		$this->view->render('login/index');
 	}
 	
-	public function clgt(){
-		echo "<pre>"; var_dump('LoginController action : clgt'); die();
+	public function signin(){
+		$this->model->checkLogin();
 	}
 
 }

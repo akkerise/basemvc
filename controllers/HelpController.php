@@ -10,13 +10,11 @@ class HelpController extends Controller
 
     public function index()
     {
+        $this->view->msg = 'HelpController';
         $this->view->render('help/index');
     }
 
     public function other($arg = false)
     {
-        require 'models/help_model.php';
-        $model = new Help_Model();
-        $this->view->blah = $model->blah();
     }
 }

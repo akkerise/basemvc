@@ -1,1 +1,1 @@
-this is the help
+<?= $this->msg ?>
