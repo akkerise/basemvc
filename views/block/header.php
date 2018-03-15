@@ -1,19 +1,19 @@
 <!doctype html>
 <html>
 <head>
-	<title>Test</title>
-	<link rel="stylesheet" href="<?php echo URL; ?>public/css/default.css" />
-	<script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
-	<script type="text/javascript" src="<?php echo URL; ?>public/js/custom.js"></script>
+	<title>Base MVC</title>
+	<link rel="stylesheet" href="<?= URL; ?>public/css/default.css" />
+	<script type="text/javascript" src="<?= URL; ?>public/js/jquery.js"></script>
+	<script type="text/javascript" src="<?= URL; ?>public/js/custom.js"></script>
 </head>
 <body>
 
 <div id="header">
-	header
+	<h4>#HEADER</h4>
 	<br />
-	<a href="<?php echo URL; ?>index">Index</a>
-	<a href="<?php echo URL; ?>help">Help</a>
-	<a href="<?php echo URL; ?>login">Login</a>
+	<a href="<?= URL; ?>index">Index</a>
+	<a href="<?= URL; ?>help">Help</a>
+	<a href="<?= URL; ?>login">Login</a>
 </div>
 	
 <div id="content">

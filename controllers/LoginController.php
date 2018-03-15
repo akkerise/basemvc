@@ -1,6 +1,6 @@
 <?php
 
-class Login extends Controller {
+class LoginController extends Controller {
 
 	public function __construct() {
 		parent::__construct();	
@@ -10,5 +10,8 @@ class Login extends Controller {
 		$this->view->render('login/index');
 	}
 	
+	public function clgt(){
+		echo "<pre>"; var_dump('LoginController action : clgt'); die();
+	}
 
 }
