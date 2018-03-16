@@ -8,19 +8,17 @@ class LoginModel extends Model
         parent::__construct();
     }
 
-    public function checkLogin()
+    public function checkSignin($params = null)
     {
+        echo "<pre>"; print_r($this->db); die();
+        $username = $params['username'] ?: $_POST['username'];
+        $password = $params['password'] ?: $_POST['password'];
         $stmt = $this->db->prepare("SELECT id FROM users WHERE username = :username AND password = MD5(:password)");
-        echo "<pre>";
-        var_dump($stmt);
-        die();
         $stmt->execute(array(
-            ':login' => $_POST['login'],
-            ':password' => $_POST['password']
+            ':username' => $username,
+            ':password' => $password
         ));
-        $user = $stmt->fetchAll();
-        echo "<pre>";
-        print_r($user);
-        die();
+        $data = $stmt->fetchAll();
+        echo "<pre>"; print_r($data); die();
     }
 }
