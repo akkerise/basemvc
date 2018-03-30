@@ -10,7 +10,7 @@ class Model
 		}
 		catch(PDOException $e)
 		{
-			echo $e->getMessage();
+			echo "<pre>"; print_r($e->getMessage()); die();
 		}
 
 	}

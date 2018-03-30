@@ -16,7 +16,6 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $this->view->msg = 'Dashboard';
         $this->view->render('dashboard/index');
     }
 }

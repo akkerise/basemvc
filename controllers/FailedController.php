@@ -13,7 +13,7 @@ class FailedController extends Controller
         if(!empty($error) || $error == null){
             $this->view->msg = $error;
         }
-        $this->view->msg = "Something error ... I dont't know !";
+        $this->view->msg = "Failed: something error ... I dont't know ! WTF???";
         $this->view->render('failed/index');
     }
 }

@@ -17,16 +17,16 @@ class LoginModel extends Model
             ':username' => $username,
             ':password' => $password
         ));
-
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
         $count = $stmt->rowCount();
-        if (md5((string)$password) === $data['password']) {
+        if ((md5((string)$password) === $data['password']) && ($count > 0)) {
+            // logged
             Session::init();
             Session::set('loggedIn', true);
-            header('location: dashboard');
+            header('location: http://basemvc.akk/dashboard');
         } else {
+            // loggout
             header('location: login');
         }
-
     }
 }
