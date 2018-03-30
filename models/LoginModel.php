@@ -11,19 +11,22 @@ class LoginModel extends Model
     public function checkSignin($params = null)
     {
         $username = $params['username'] ?: $_POST['username'];
-        $password = md5($params['password'] ?: $_POST['password']);
-        $stmt = $this->db->prepare("SELECT * FROM users WHERE username = :username");
+        $password = $params['password'] ?: $_POST['password'];
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE username = :username AND password = MD5(:password)");
         $stmt->execute(array(
-            ':username' => $username
+            ':username' => $username,
+            ':password' => $password
         ));
-        $data = $stmt->fetchAll(PDO::FETCH_OBJ)[0];
-        
-        if (password_verify($data->password, $password)) {
-            echo "<pre>"; var_dump(1); die();
+
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
+        $count = $stmt->rowCount();
+        if (md5((string)$password) === $data['password']) {
+            Session::init();
+            Session::set('loggedIn', true);
+            header('location: dashboard');
+        } else {
+            header('location: login');
         }
-        
-        echo "<pre>";
-        var_dump(2);
-        die();
+
     }
 }
