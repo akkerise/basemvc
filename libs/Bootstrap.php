@@ -8,7 +8,7 @@ class Bootstrap
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
         $url = explode('/', $url);
-        
+
         // print_r($url);
         if (empty($url[0])) {
             require 'controllers/IndexController.php';
@@ -17,17 +17,21 @@ class Bootstrap
             return false;
         }
 
-        $file = 'controllers/' . $url[0] . 'Controller.php';
-        if (file_exists($file)) {
+        // check and require controller file
+        $file = 'controllers/' . ucfirst(strtolower(trim($url[0]))) . 'Controller.php';
+        try{
+            if (!file_exists($file)) {
+                throw new Exception("File name is: ". ucfirst(strtolower(trim($url[0]))) . 'Controller.php' ." does not exist!");
+            }
             require $file;
-        } else {
-            self::failed(ERROR_CONTROLLER_NOT_EXIST);
+        }catch(Exception $e){
+            echo "<pre>"; print_r($e->getMessage()); die();
         }
 
         $nameController = ucfirst(strtolower(trim($url[0]))) . 'Controller';
         $controller = new $nameController();
         $controller->loadModel($url[0]);
-        
+
         // calling method with check parameters
         if (isset($url[2])) {
             if (method_exists($controller, $url[1])) {

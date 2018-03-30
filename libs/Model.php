@@ -2,8 +2,16 @@
 
 class Model
 {
-    public function __construct()
-    {
-        $this->db = new Database();
-    }
+	public function __construct()
+	{
+		try
+		{
+			$this->db = new Database();
+		}
+		catch(PDOException $e)
+		{
+			echo $e->getMessage();
+		}
+
+	}
 }
