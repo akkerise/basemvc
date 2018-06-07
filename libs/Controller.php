@@ -12,17 +12,12 @@ class Controller
     {
         $ucName = ucfirst(strtolower(trim($name)));
         $modelName = $ucName . 'Model';
-        // check and require model file
         $file = 'models/' . $ucName . 'Model.php';
-        try{
-            // exists and not exists model file == true 
-            if (!file_exists($file)) {
-                throw new Exception("File with name: ". $modelName . '.php' ." does not exist! Directiory : " . $file);
-            }
+        if(file_exists($file)){
             require $file;
-        }catch(Exception $e){
-            echo "<pre>"; print_r($e->getMessage()); die();
-        }
+            $modelName = $ucName . 'Model';
+            $this->model = new $modelName();
+        }        
         $this->model = new $modelName();
     }
 }

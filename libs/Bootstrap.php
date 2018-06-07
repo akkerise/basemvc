@@ -9,7 +9,6 @@ class Bootstrap
         $url = rtrim($url, '/');
         $url = explode('/', $url);
 
-        // print_r($url);
         if (empty($url[0])) {
             require 'controllers/IndexController.php';
             $controller = new IndexController();
@@ -21,7 +20,7 @@ class Bootstrap
         $file = 'controllers/' . ucfirst(strtolower(trim($url[0]))) . 'Controller.php';
         try{
             if (!file_exists($file)) {
-                throw new Exception("File name is: ". ucfirst(strtolower(trim($url[0]))) . 'Controller.php' ." does not exist! Directiory : " . $file);
+                throw new Exception("File name is: ". ucfirst(strtolower(trim($url[0]))) . "Controller.php" . " does not exist! Directiory : " . $file);
             }
             require $file;
         }catch(Exception $e){

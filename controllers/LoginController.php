@@ -14,4 +14,8 @@ class LoginController extends Controller {
 	    $this->model->checkSignin();
     }
 
+    public function bbc(){
+    	echo "<pre>"; print_r(1); die();
+    }
+
 }
