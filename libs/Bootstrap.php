@@ -1,45 +1,61 @@
 <?php
-namespace libs;
 
 class Bootstrap
 {
 
     public function __construct()
     {
-        $url = explode('/', isset($_GET['url']) ? $_GET['url'] : null);
-        
+        $url = isset($_GET['url']) ? $_GET['url'] : null;
+        $url = rtrim($url, '/');
+        $url = explode('/', $url);
+
         if (empty($url[0])) {
-            require CONTROLLERS_PATH . '/Index.php';
-            $controller = new \Index();
+            require "app/controller/IndexController.php";
+            $controller = new IndexController();
             $controller->index();
             return false;
         }
-        
-        // load controllers folder
-        $file = ROOT_PATH . DS . CONTROLLERS_PATH . DS . $url[0] . '.php';
-        if (file_exists($file)) {
+
+        // check and require controller file
+        $file = "app/controller/" . ucfirst(strtolower(trim($url[0]))) . "Controller.php";
+        try{
+            if (!file_exists($file)) {
+                throw new Exception("File name is: ". ucfirst(strtolower(trim($url[0]))) . "Controller.php" ." does not exist! Directiory : " . $file);
+            }
             require $file;
-        } else {
-            require CONTROLLERS_PATH . '/Fail.php';
-            $controller = new \Fail();
-            return false;
+        }catch(Exception $e){
+            echo "<pre>"; print_r($e->getMessage()); die();
         }
-        
-        $controller = new $url[0]();
+
+        $nameController = ucfirst(strtolower(trim($url[0]))) . "Controller";
+        $controller = new $nameController();
         $controller->loadModel($url[0]);
-        
+
+        // calling method with check parameters
         if (isset($url[2])) {
             if (method_exists($controller, $url[1])) {
                 $controller->{$url[1]}($url[2]);
             } else {
-                throw new \Exception('The method doesn\'t exists! ');
+                self::failed(ERROR_PARAM_NOT_EXIST);
             }
         } else {
             if (isset($url[1])) {
-                $controller->{$url[1]}();
+                if (method_exists($controller, $url[1])) {
+                    $controller->{$url[1]}();
+                } else {
+                    self::failed(ERROR_METHOD_NOT_EXIST);
+                }
             } else {
                 $controller->index();
             }
         }
+    }
+
+    private static function failed($constError = null)
+    {
+        require "app/controller/FailedController.php";
+        $controller = new FailedController($constError);
+        $controller->index($constError);
+        return false;
     }
 }

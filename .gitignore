@@ -1,4 +1,7 @@
 /.idea
 .idea/*
+.phpintel
 .phpintel/*
 /.phpintel
+.history
+/nbproject/private/
