@@ -4,16 +4,18 @@ class View
 {
 
     public function __construct()
-    {}
+    {
+        
+    }
 
     public function render($name, $noInclude = false)
     {
         if ($noInclude == true) {
-            require 'views/' . $name . '.php';
+            require 'app/view/' . $name . '.php';
         } else {
-            require 'views/block/header.php';
-            require 'views/' . $name . '.php';
-            require 'views/block/footer.php';
+            require 'app/view/block/header.php';
+            require 'app/view/' . $name . '.php';
+            require 'app/view/block/footer.php';
         }
     }
 }

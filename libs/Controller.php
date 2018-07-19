@@ -12,12 +12,11 @@ class Controller
     {
         $ucName = ucfirst(strtolower(trim($name)));
         $modelName = $ucName . 'Model';
-        $file = 'models/' . $ucName . 'Model.php';
+        $file = 'app/model/' . $ucName . 'Model.php';
         if(file_exists($file)){
             require $file;
             $modelName = $ucName . 'Model';
             $this->model = new $modelName();
         }        
-        $this->model = new $modelName();
     }
 }

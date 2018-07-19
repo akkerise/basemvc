@@ -10,14 +10,14 @@ class Bootstrap
         $url = explode('/', $url);
 
         if (empty($url[0])) {
-            require "controllers/IndexController.php";
+            require "app/controller/IndexController.php";
             $controller = new IndexController();
             $controller->index();
             return false;
         }
 
         // check and require controller file
-        $file = "controllers/" . ucfirst(strtolower(trim($url[0]))) . "Controller.php";
+        $file = "app/controller/" . ucfirst(strtolower(trim($url[0]))) . "Controller.php";
         try{
             if (!file_exists($file)) {
                 throw new Exception("File name is: ". ucfirst(strtolower(trim($url[0]))) . "Controller.php" ." does not exist! Directiory : " . $file);
@@ -53,7 +53,7 @@ class Bootstrap
 
     private static function failed($constError = null)
     {
-        require "controllers/FailedController.php";
+        require "app/controller/FailedController.php";
         $controller = new FailedController($constError);
         $controller->index($constError);
         return false;
