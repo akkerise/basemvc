@@ -11,14 +11,11 @@
 <div id="header">
 	<h4>#HEADER</h4>
 	<br />
-	<a href="<?= URL; ?>index">Home</a>
-	<a href="<?= URL; ?>help">Help</a>
-	<?php if(Session::get('loggedIn')): ?>
-	<a href="<?= URL; ?>dashboard">Dashboard</a>
-	<a href="<?= URL; ?>logout">Logout</a>
-	<?php else: ?>
-	<a href="<?= URL; ?>login">Login</a>
-	<?php endif ?>
+	<a href="<?= URL ?>index">Home</a>
+	<a href="<?= URL ?>help">Help</a>
+	<a href="<?= URL ?>dashboard">Dashboard</a>
+	<a href="<?= URL ?>login">Login</a>
+    <a href="<?= URL ?>mark">Mark</a>
 </div>
 	
 <div id="content">

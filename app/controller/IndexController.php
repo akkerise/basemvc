@@ -10,12 +10,6 @@ class IndexController extends Controller
 
     public function index()
     {
-        $this->view->msg = 'IndexController';
-        $this->view->render('index/index');
-    }
-
-    public function details()
-    {
         $this->view->render('index/index');
     }
 }
