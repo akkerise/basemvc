@@ -26,7 +26,7 @@ class Bootstrap
         $file = "app/controller/" . $nameC . "Controller.php";
         try{
             if (!file_exists($file)) {
-                throw new Exception("File name is: ". $nameC . "Controller.php" ." does not exist! Directiory : " . $file);
+                throw new Exception("Controller name is: ". $nameC . "Controller.php" ." does not exist! Directiory : " . $file);
             }
             require $file;
         }catch(Exception $e){
