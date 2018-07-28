@@ -3,8 +3,22 @@
 
 		var self = this;
 
+		var map;
+
+		var markers = [];
+
+		var API_VTC = 'https://vtcgame.vn/Vcoin/';
+
+		var API_GOOGLE_SEARCH_LAT_LNG = 'https://maps.googleapis.com/maps/api/geocode/json';
+
+		var API_GOOGLE_KEY = 'AIzaSyDi-Cl5IvRclyM58mkQoBoV4RSlghEegAo';
+
+		this.init = function () {
+			this.position();
+		}
+
 		this.position = function (obj) {
-			app.fly({
+			this.fly({
 				service: 'APIPositionList',
 				loading: true,
 				method: 'GET',
@@ -19,7 +33,7 @@
 		}
 
 		this.location = function (positionId) {
-			app.fly({
+			this.fly({
 				service: 'APILocationList',
 				loading: true,
 				method: 'POST',
@@ -36,7 +50,7 @@
 		}
 
 		this.district = function(locationId) {
-			app.fly({
+			this.fly({
 				service: 'APIDistrictList',
 				loading: true,
 				method: 'POST',
@@ -67,13 +81,14 @@
 		this.searchDistrict = function() {
 			var districtId = $("#district option:selected").val();
 			self.searchStore(districtId);
+
 		}
 
 		this.searchStore	 = function(disId) {
 			var posId = $("#position option:selected").val();
 			var locId = $("#location option:selected").val();
 			if(posId && locId && disId){
-				app.fly({
+				this.fly({
 					service: 'APISearchAgency',
 					loading: true,
 					method: 'POST',
@@ -83,10 +98,22 @@
 						DistrictID: disId
 					},
 					success: function (result) {
+						self.clearMarkers();
+						var address = [];
+						var config = {
+							url: API_GOOGLE_SEARCH_LAT_LNG,
+							method: 'get',
+							params: {
+								'key': API_GOOGLE_KEY,
+								'address': ''
+							}
+						}
 						$('#list-card').html('');
 						$('#total-card').html(result.length);
+						var parent = self;
 						$.each(result, function(key, obj) {
 							$('#list-card').append(self.tempCard(key,obj));
+							parent.searchLatLng(obj.Address);
 						});
 						self.filterStore(result);
 					}
@@ -94,11 +121,29 @@
 			}
 		}
 
+		this.searchLatLng = function(address = '') {
+			var config = {
+				url: API_GOOGLE_SEARCH_LAT_LNG,
+				method: 'get',
+				params: {
+					'key': API_GOOGLE_KEY,
+					'address': address
+				}
+			};
+			this.request(config)
+			.then(res => {
+				self.addMarker(res.data.results[0].geometry.location, self.map);
+			})
+			.catch(err => {
+				console.log(err);
+			})
+		}
+
 		this.filterStore = function (result) {
 			$('#store').keyup(function() {
 				$('#list-card').html('');
+				var dataValid = [];
 				if($(this).val() != ''){
-					var dataValid = [];
 					var regex = new RegExp($(this).val(), "i");
 					$.each(result, function(key, obj) {
 						if ( obj.AgencyName.search(regex) != -1 ) {
@@ -108,12 +153,11 @@
 					});
 					$('#total-card').html(dataValid.length);
 				}else{
-
 					$.each(result, function(key, obj) {
 						$('#list-card').append(self.tempCard(key,obj));
 					});
+					$('#total-card').html(dataValid.length);
 				}
-				console.log(result);
 			});
 		}
 
@@ -133,42 +177,21 @@
 					'</div>';
 		}
 
-	}
-
-
-	function Maps() {
-		var neighborhoods = [
-		{lat: 52.511, lng: 13.447},
-		{lat: 52.549, lng: 13.422},
-		{lat: 52.497, lng: 13.396},
-		{lat: 52.517, lng: 13.394}
-		];
-
-		var markers = [];
-		var map;
-
-		this.initMap = function () {
-			map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 12,
-				center: {lat: 52.520, lng: 13.410}
-			});
-		}
-
-		this.drop = function () {
-			clearMarkers();
-			for (var i = 0; i < neighborhoods.length; i++) {
-				addMarkerWithTimeout(neighborhoods[i], i * 200);
+		this.initMap = function (position = {}) {
+			var options = {
+				zoom: 6,
+				center: {lat: 14.0583, lng: 108.2772}
 			}
+			var map = new google.maps.Map(document.getElementById('map'), options);
+			this.map = map;
 		}
 
-		this.addMarkerWithTimeout = function (position, timeout) {
-			window.setTimeout(function() {
-				markers.push(new google.maps.Marker({
-					position: position,
-					map: map,
-					animation: google.maps.Animation.DROP
-				}));
-			}, timeout);
+		this.addMarker = function (position, map) {
+			markers.push(new google.maps.Marker({
+				position: position,
+				map: map,
+				animation: google.maps.Animation.DROP
+			}));
 		}
 
 		this.clearMarkers = function () {
@@ -177,12 +200,50 @@
 			}
 			markers = [];
 		}
+
+		this.fly = function(params) {
+				params = $.extend({
+		        method:'get',
+		        loading: true,
+		    }, params);
+		    if(params.loading){
+		        loading.show();
+		    }
+		    $.ajax({
+		        url: API_VTC + params.service,
+		        type: params.method,
+		        data: params.data,
+		        dataType: 'json',
+		        async: params.async,
+		        headers: params.headers,
+		        success:function(result){
+		            if(params.loading){
+		                loading.hide();
+		            }
+		            if(!result.status && result.message == '-signin'){
+		                viewer = null;
+		                document.location = '#auth';
+		            }
+		            else{
+		                params.success(result);
+		            }
+		        },
+		        error:function(){
+		            if(params.loading){
+		                loading.hide();
+		            }
+		            console.log('Có lỗi xảy ra trong quá trình truyền dữ liệu, xin hãy kiểm tra lại kết nối mạng!');
+		        }
+		    });
+		}
+
+		this.request = function (config) {
+			return axios(config);
+		}
+
 	}
 
 	this.mapsvin = new Mapsvin();
-	this.maps = new Maps();
+
 })();
 
-$(document).ready(function(){
-	mapsvin.position();
-});

@@ -1,6 +1,12 @@
+<style>
+#map {
+    height: 698px;
+    width: 100%;
+}
+</style>
 <h4>Mark Location</h4>
 <hr>
-<div class="row" onload="mapsvin.load();">
+<div class="row" id="mapsvin">
     <div class="col">
         <div class="form-group">
             <label for="position">Vùng/Miền</label>
@@ -36,14 +42,10 @@
             <span id="total-card" class="badge badge-danger">0</span> cửa hàng được tìm thấy
         </div>
         <div id="list-card">
-            
+
         </div>
     </div>
     <div class="col-9" style="border: 1px solid red;">
     	<div id="map"></div>
     </div>
 </div>
-
-<script type="text/javascript">
-    
-</script>
