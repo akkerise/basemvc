@@ -16,10 +16,10 @@ class Bootstrap
             return false;
         }
         $nameC = explode('-', strtolower(trim($url[0])));
-        if(count($nameC) > 1){
-            foreach ($nameC as $k => $v){
-                $nameC[$k] = ucfirst($v);
-            }
+        if(count($nameC) > 0){
+            array_walk($nameC, function(&$value, $key){
+                $value = ucfirst($value);
+            });
         }
         $nameC = implode($nameC);
         // check and require controller file

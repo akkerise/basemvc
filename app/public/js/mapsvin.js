@@ -132,7 +132,7 @@
 			};
 			this.request(config)
 			.then(res => {
-				self.addMarker(res.data.results[0].geometry.location, self.map);
+				var marker = self.addMarker(res.data.results[0].geometry.location, self.map, address);
 			})
 			.catch(err => {
 				console.log(err);
@@ -186,12 +186,23 @@
 			this.map = map;
 		}
 
-		this.addMarker = function (position, map) {
-			markers.push(new google.maps.Marker({
+		this.addMarker = function (position, map, address) {
+			var marker = new google.maps.Marker({
 				position: position,
 				map: map,
 				animation: google.maps.Animation.DROP
-			}));
+			});
+			markers.push(marker);
+			this.addInfoMarker(marker, map, address);
+		}
+
+		this.addInfoMarker = function (marker, map, address) {
+			var infoMarker = new google.maps.InfoWindow({
+				content: '<h5>'+address+'</h5>'
+			});
+			marker.addListener('click', function() {
+				infoMarker.open(map, marker);
+			})
 		}
 
 		this.clearMarkers = function () {
