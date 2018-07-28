@@ -8,14 +8,13 @@ class Controller
         $this->view = new View();
     }
 
-    public function loadModel($name = null)
+    public function loadModel($nameC = null)
     {
-        $ucName = ucfirst(strtolower(trim($name)));
-        $modelName = $ucName . 'Model';
-        $file = 'app/model/' . $ucName . 'Model.php';
+        $modelName = $nameC . 'Model';
+        $file = 'app/model/' . $nameC . 'Model.php';
         if(file_exists($file)){
             require $file;
-            $modelName = $ucName . 'Model';
+            $modelName = $nameC . 'Model';
             $this->model = new $modelName();
         }        
     }

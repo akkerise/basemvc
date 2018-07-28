@@ -15,21 +15,27 @@ class Bootstrap
             $controller->index();
             return false;
         }
-
+        $nameC = explode('-', strtolower(trim($url[0])));
+        if(count($nameC) > 1){
+            foreach ($nameC as $k => $v){
+                $nameC[$k] = ucfirst($v);
+            }
+        }
+        $nameC = implode($nameC);
         // check and require controller file
-        $file = "app/controller/" . ucfirst(strtolower(trim($url[0]))) . "Controller.php";
+        $file = "app/controller/" . $nameC . "Controller.php";
         try{
             if (!file_exists($file)) {
-                throw new Exception("File name is: ". ucfirst(strtolower(trim($url[0]))) . "Controller.php" ." does not exist! Directiory : " . $file);
+                throw new Exception("Controller name is: ". $nameC . "Controller.php" ." does not exist! Directiory : " . $file);
             }
             require $file;
         }catch(Exception $e){
             echo "<pre>"; print_r($e->getMessage()); die();
         }
 
-        $nameController = ucfirst(strtolower(trim($url[0]))) . "Controller";
+        $nameController = $nameC . "Controller";
         $controller = new $nameController();
-        $controller->loadModel($url[0]);
+        $controller->loadModel($nameC);
 
         // calling method with check parameters
         if (isset($url[2])) {
@@ -57,5 +63,9 @@ class Bootstrap
         $controller = new FailedController($constError);
         $controller->index($constError);
         return false;
+    }
+
+    private static function convertURI($uri){
+        return split('(?=[A-Z][^A-Z])([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)', $uri);
     }
 }
