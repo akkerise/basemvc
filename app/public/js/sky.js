@@ -1,10 +1,11 @@
 (function () {
 	function Sky() {
 
-		this.get = function(url) {
+		this.get = function(url, data) {
 			return axios({
 		        method: 'GET',
-		        url: url
+		        url: url,
+		        data: data
 		    })
 		}
 
@@ -21,6 +22,10 @@
 		        method: 'DELETE',
 		        url: url,
 		    })
+		}
+
+		this.request = function (config) {
+			return axios(config);
 		}
 	}
 
