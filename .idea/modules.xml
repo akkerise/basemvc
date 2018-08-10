@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/basemvc.iml" filepath="$PROJECT_DIR$/.idea/basemvc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../h5-game-portal/.idea/h5-game-portal.iml" filepath="$PROJECT_DIR$/../h5-game-portal/.idea/h5-game-portal.iml" />
-    </modules>
-  </component>
-</project>
