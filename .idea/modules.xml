@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/basemvc.iml" filepath="$PROJECT_DIR$/.idea/basemvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/../h5-game-portal/.idea/h5-game-portal.iml" filepath="$PROJECT_DIR$/../h5-game-portal/.idea/h5-game-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../web-cms-vip/.idea/web-cms-vip.iml" filepath="$PROJECT_DIR$/../web-cms-vip/.idea/web-cms-vip.iml" />
     </modules>
   </component>
 </project>
