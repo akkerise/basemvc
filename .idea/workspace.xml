@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751a607d-fadc-468c-986f-de7833f01a0b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/basemvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/basemvc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web-cms-vip/src/backend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../web-cms-vip/src/backend/controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web-cms-vip/src/common/models/user/UserGiftRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/../web-cms-vip/src/common/models/user/UserGiftRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web-cms-vip/src/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../web-cms-vip/src/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web-cms-vip/src/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../web-cms-vip/src/composer.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,66 +34,7 @@
     <favorites_list name="basemvc" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/backend/controllers/SiteController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="617" selection-start-line="617" selection-end-line="617" />
-              <folding>
-                <element signature="e#39#97#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayHelper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/vendor/yiisoft/yii2/helpers/ArrayHelper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseArrayHelper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-              <folding>
-                <element signature="e#176#184#0#PHP" expanded="true" />
-                <element signature="e#1740#3265#0#PHP" />
-                <element signature="e#4158#5067#0#PHP" />
-                <element signature="e#7360#8516#0#PHP" />
-                <element signature="e#10091#10671#0#PHP" />
-                <element signature="e#11429#11725#0#PHP" />
-                <element signature="e#12435#12788#0#PHP" />
-                <element signature="e#16846#17878#0#PHP" />
-                <element signature="e#18717#19141#0#PHP" />
-                <element signature="e#21294#21839#0#PHP" />
-                <element signature="e#23153#24547#0#PHP" />
-                <element signature="e#25245#26003#0#PHP" />
-                <element signature="e#26584#27154#0#PHP" />
-                <element signature="e#27766#28304#0#PHP" />
-                <element signature="e#28891#29364#0#PHP" />
-                <element signature="e#32021#32489#0#PHP" />
-                <element signature="e#33721#34987#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserGiftRequest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/common/models/user/UserGiftRequest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="389" column="22" selection-start-line="389" selection-start-column="22" selection-end-line="389" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -113,15 +47,24 @@
     <findStrings>
       <find>FETCH_OBJ</find>
       <find>$object</find>
+      <find>denyAccess</find>
+      <find>map</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="thanhna &lt;thanhna@appota.com&gt;" />
         <option value="AkKeRise &lt;akkerise@gmail.com&gt;" />
       </list>
     </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../web-cms-vip" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../web-cms-vip" value="feature/thanhna" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -131,13 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controllers/abcd.php" />
-        <option value="$PROJECT_DIR$/controllers/error.php" />
-        <option value="$PROJECT_DIR$/libs/Failed.php" />
-        <option value="$PROJECT_DIR$/libs/Fail.php" />
-        <option value="$PROJECT_DIR$/views/error/index.php" />
-        <option value="$PROJECT_DIR$/models/HelpModel.php" />
-        <option value="$PROJECT_DIR$/views/block/footer.php" />
         <option value="$PROJECT_DIR$/controllers/index.php" />
         <option value="$PROJECT_DIR$/public/css/default.css" />
         <option value="$PROJECT_DIR$/public/js/jquery.js" />
@@ -181,6 +117,13 @@
         <option value="$PROJECT_DIR$/../h5-game-portal/src/app/Modules/Cms/Http/Controllers/Game/GameController.php" />
         <option value="$PROJECT_DIR$/../h5-game-portal/src/app/Modules/Cms/Entities/Service/RedisService.php" />
         <option value="$PROJECT_DIR$/../web-cms-vip/src/common/models/user/UserGiftRequest.php" />
+        <option value="$PROJECT_DIR$/../web-cms-vip/.gitignore" />
+        <option value="$PROJECT_DIR$/../web-cms-vip/src/backend/components/UserVipFilterTrait.php" />
+        <option value="$PROJECT_DIR$/../web-cms-vip/src/backend/views/user/user/index.php" />
+        <option value="$PROJECT_DIR$/../web-cms-vip/src/common/libs/Until.php" />
+        <option value="$PROJECT_DIR$/../web-cms-vip/src/backend/controllers/user/UserController.php" />
+        <option value="$PROJECT_DIR$/../web-cms-vip/src/backend/models/user/search/UserSearch.php" />
+        <option value="$PROJECT_DIR$/../web-cms-vip/src/backend/views/site/index.php" />
         <option value="$PROJECT_DIR$/../web-cms-vip/src/backend/controllers/SiteController.php" />
       </list>
     </option>
@@ -204,19 +147,64 @@
       <path value="$PROJECT_DIR$/../h5-game-portal/src/app/Modules/Client/package.json" />
       <path value="$PROJECT_DIR$/../h5-game-portal/src/app/Modules/Cms/package.json" />
       <path value="$PROJECT_DIR$/../h5-game-portal/src/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/assets/2b2fd186/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/assets/4d34a91f/package.json" />
       <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/assets/5179f8fc/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/assets/564e4ffe/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/assets/80974ec1/package.json" />
       <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/assets/87fdb6bf/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/assets/a5caa3cc/package.json" />
       <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/assets/a8c81e02/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/assets/dc600522/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/Chart.js/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/DateJS/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/Flot/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/animate.css/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/autosize/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/bootstrap-daterangepicker/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/bootstrap-progressbar/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/bootstrap-wysiwyg/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/cropper/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/devbridge-autocomplete/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/echarts/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/eve/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/flot-spline/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/ion.rangeSlider/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/jquery-knob/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/jquery.easy-pie-chart/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/jqvmap/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/jszip/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/morris.js/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/select2/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/starrr/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/switchery/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/gen/vendors/transitionize/package.json" />
       <path value="$PROJECT_DIR$/../web-cms-vip/src/backend/web/js/morris.js/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/bower-asset/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/bower-asset/bootstrap3-dialog/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/bower-asset/c3/package.json" />
       <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/bower-asset/chartjs/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/bower-asset/inputmask/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/bower-asset/jquery/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/bower-asset/open-sans-fontface/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/bower-asset/punycode/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/bower-asset/typeahead.js/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/bower-asset/yii2-pjax/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/ckeditor/ckeditor/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/kartik-v/bootstrap-fileinput/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/kartik-v/bootstrap-popover-x/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/kartik-v/bootstrap-star-rating/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/kartik-v/dependent-dropdown/package.json" />
+      <path value="$PROJECT_DIR$/../web-cms-vip/src/vendor/kartik-v/php-date-formatter/package.json" />
     </packageJsonPaths>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-198" />
-    <option name="y" value="178" />
+    <option name="x" value="260" />
+    <option name="y" value="20" />
     <option name="width" value="1400" />
-    <option name="height" value="827" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -234,11 +222,6 @@
               <item name="basemvc" type="b2602c69:ProjectViewProjectNode" />
               <item name="web-cms-vip" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="basemvc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-cms-vip" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -251,12 +234,12 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web-cms-vip" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../projectecm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1017,7 +1000,10 @@
       <workItem from="1532076306671" duration="4132000" />
       <workItem from="1532699672950" duration="6057000" />
       <workItem from="1534300902372" duration="124000" />
-      <workItem from="1534301327345" duration="15889000" />
+      <workItem from="1534301327345" duration="16242000" />
+      <workItem from="1534386031679" duration="9675000" />
+      <workItem from="1534407563281" duration="5867000" />
+      <workItem from="1534435190722" duration="3745000" />
     </task>
     <task id="LOCAL-00001" summary="Done part 1 - Create your own MVC">
       <created>1519872096114</created>
@@ -1026,11 +1012,39 @@
       <option name="project" value="LOCAL" />
       <updated>1519872096115</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test birthday, daily, new vip">
+      <created>1534408449009</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534408449009</updated>
+    </task>
+    <task id="LOCAL-00003" summary="testing">
+      <created>1534408769468</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1534408769468</updated>
+    </task>
+    <task id="LOCAL-00004" summary="testing">
+      <created>1534408983997</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1534408983997</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add inactive">
+      <created>1534418062063</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1534418062063</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92983000" />
+    <option name="totallyTimeSpent" value="112623000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1043,17 +1057,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293011" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Migrations" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Migrations" order="8" weight="0.3293011" />
+      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3293011" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.26406926" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.24567099" />
       <window_info anchor="right" id="JSON Viewer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19936034" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1684435" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1094,7 +1107,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Done part 1 - Create your own MVC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done part 1 - Create your own MVC" />
+    <MESSAGE value="test birthday, daily, new vip" />
+    <MESSAGE value="testing" />
+    <MESSAGE value="add inactive" />
+    <option name="LAST_COMMIT_MESSAGE" value="add inactive" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1106,25 +1122,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/public/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/fail.php" />
-    <entry file="file://$PROJECT_DIR$/app/views/help/index.php" />
-    <entry file="file://$PROJECT_DIR$/views/home/index.php" />
-    <entry file="file://$PROJECT_DIR$/views/fail/index.php" />
-    <entry file="file://$PROJECT_DIR$/controllers/login.php" />
-    <entry file="file://$PROJECT_DIR$/controllers/help.php" />
-    <entry file="file://$PROJECT_DIR$/controllers/home.php" />
-    <entry file="file://$PROJECT_DIR$/config/paths.php" />
-    <entry file="file://$PROJECT_DIR$/app/views/block/footer.php" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/189c931a-a485-4941-bfc4-c4125222e5b0/console.sql" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/FailedController.php" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/HelpController.php" />
     <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php" />
     <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.php" />
     <entry file="file://$PROJECT_DIR$/app/views/login/index.php" />
@@ -1283,36 +1280,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/common/models/user/UserGiftRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="88">
           <caret line="389" column="22" selection-start-line="389" selection-start-column="22" selection-end-line="389" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="17">
           <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding>
-            <element signature="e#176#184#0#PHP" expanded="true" />
-            <element signature="e#1740#3265#0#PHP" />
-            <element signature="e#4158#5067#0#PHP" />
-            <element signature="e#7360#8516#0#PHP" />
-            <element signature="e#10091#10671#0#PHP" />
-            <element signature="e#11429#11725#0#PHP" />
-            <element signature="e#12435#12788#0#PHP" />
-            <element signature="e#16846#17878#0#PHP" />
-            <element signature="e#18717#19141#0#PHP" />
-            <element signature="e#21294#21839#0#PHP" />
-            <element signature="e#23153#24547#0#PHP" />
-            <element signature="e#25245#26003#0#PHP" />
-            <element signature="e#26584#27154#0#PHP" />
-            <element signature="e#27766#28304#0#PHP" />
-            <element signature="e#28891#29364#0#PHP" />
-            <element signature="e#32021#32489#0#PHP" />
-            <element signature="e#33721#34987#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1323,12 +1308,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/backend/web/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/common/components/StaffPermission.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1377">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/vendor/yiisoft/yii2/filters/AccessControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="160" column="1" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/common/libs/Until.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/backend/views/user/user/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/backend/components/rbac/CustomAccessControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <element signature="e#43#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/common/models/user/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2567">
+          <caret line="164" column="26" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/backend/controllers/user/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/backend/components/UserVipFilterTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="67" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/backend/models/user/search/UserSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="99" column="41" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/backend/views/site/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/backend/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="75" column="38" lean-forward="true" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../web-cms-vip/src/backend/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="617" selection-start-line="617" selection-end-line="617" />
+        <state relative-caret-position="193">
+          <caret line="116" column="37" lean-forward="true" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
           <folding>
             <element signature="e#39#97#0#PHP" expanded="true" />
+            <element signature="e#1755#2754#0#PHP" />
           </folding>
         </state>
       </provider>

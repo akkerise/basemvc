@@ -11,6 +11,7 @@
     <script type="text/javascript" src="<?= URL ?>app/public/js/sky.js"></script>
     <script type="text/javascript" src="<?= URL ?>app/public/js/ejs.js"></script>
     <script type="text/javascript" src="<?= URL ?>app/public/js/tmpl.js"></script>
+    <script type="text/javascript" src="<?= URL ?>app/public/js/functional.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjpQsW1iXSAXHmSu2uGKqxt527i9Jxp8U&callback=initMap">
     </script>
     <script>
